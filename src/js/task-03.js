@@ -13,9 +13,8 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector('.gallery');
-console.log(gallery);
-const elemGallery = images.map(image => {
-  const galleryEl = `<li><img src = ${image.url} alt = ${image.alt} width = "450" height = "350" class="gallery__img"</li>`;
-  gallery.insertAdjacentHTML("beforeend", galleryEl);
-})
+
+const galleryImg = document.querySelector('.gallery');
+const elemGallery = images.map(image => `<li><img src = ${image.url} alt = ${image.alt} width = "450" height = "350" class="gallery__img"</li>`
+);
+galleryImg.insertAdjacentHTML("afterbegin", elemGallery);
